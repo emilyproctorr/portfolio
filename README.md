@@ -23,4 +23,43 @@ This was my capstone project created in my senior year of my undergraduate degre
 
 ## Scripts
 
+Here are a few examples of programming scripts I’ve developed and used. While this isn’t an exhaustive collection, I wanted to share a selection that highlights my work. 
+
 ### Bash Scripts
+
+#### AlphaFold 2 on HPC Cluster
+
+Link: [AlphaFold 2](bash_scripts/alphafold2_hpc_cluster)
+
+AlphaFold 2 is a protein structure prediction tool that accurately predicts the 3D structure of a protein from its amino acid sequence. I have utilized this tool to predict the structures of thousands of protein sequences across various aspects of my research.
+
+#### Protein Contact Map Generation with RaptorX on HPC Cluster
+
+Link: [Protein Contact Map Generation](bash_scripts/contact_map_generation)
+
+RaptorX is an application used to generate protein contact maps. In this case, the workflow involves three scripts (not included in this repository) that must be executed sequentially to complete the contact map generation process. Given the need to process a large number of sequences efficiently, I developed and optimized these scripts for high-throughput contact map generation on an HPC cluster environment.
+
+#### EMBOSS Stretcher Pairwise Sequence Similarity on HPC Cluster
+
+Link: [EMBOSS Stretcher](bash_scripts/emboss_stretcher)
+
+The EMBOSS Stretcher program is a tool used to compare two protein sequences using global alignment. I utilized this application to compute all-vs-all pairwise sequence similarity across large protein datasets. To enhance efficiency, I developed and implemented scripts that optimize sequence similarity computations using EMBOSS Stretcher on an HPC cluster environment.
+
+### Python Scripts
+
+#### Data Visualization
+
+Link: [Python Data Visualization](python_scripts/plots)
+
+I’ve included several examples of plots I’ve created using libraries such as Matplotlib, Seaborn, and Pandas to visualize and analyze data. I have included example plot images within this folder.
+
+#### Tkinter Tool
+
+Link: [Tkinter GUI Tool](python_scripts/tkinter_tool)
+
+I developed a GUI using the Tkinter library to visualize a proteins contact map and AlphaFold 2 prediction image. This application enables users to classify proteins as "yes," "maybe," or "no" based on a specific characteristic of interest. It displays the selected classification along with the corresponding protein ID. Additionally, the application automatically saves progress, ensuring that user responses are preserved. Upon restarting, it resumes from the last recorded protein, allowing for continuation of the analysis. I have also included an image of the application within this folder.
+
+
+
+
+
