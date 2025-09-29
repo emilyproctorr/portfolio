@@ -23,7 +23,7 @@ This was my capstone project created in my senior year of my undergraduate degre
 
 ## Scripts
 
-Here are a few examples of programming scripts I’ve developed and used. While this isn’t an exhaustive collection, I wanted to share a selection that highlights my work. 
+I have provided a few examples of programming scripts I’ve developed and used. While this is far from an exhaustive collection, I wanted to share a selection that highlights my work. 
 
 ### Bash Scripts
 
@@ -51,7 +51,7 @@ The EMBOSS Stretcher program is a tool used to compare two protein sequences usi
 
 Link: [Python Data Visualization](python_scripts/plots)
 
-I’ve included several examples of plots I’ve created using libraries such as Matplotlib, Seaborn, and Pandas to visualize and analyze data. I have included example plot images within this folder.
+I’ve included several examples of simple plots I’ve created using libraries such as Matplotlib, Seaborn, and Pandas to visualize and analyze data. I have included example plot images within this folder.
 
 #### Tkinter Tool
 
