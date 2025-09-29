@@ -5,7 +5,6 @@
 #SBATCH --mem=500M
 #SBATCH --mincpus=1
 
-# Slusky Lab
 # Emily Proctor
 
 # this should be submitted with --array tag

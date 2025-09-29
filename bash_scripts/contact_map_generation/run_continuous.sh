@@ -5,7 +5,6 @@
 #SBATCH --mem=1G
 
 # Emily Proctor
-# Slusky Lab
 
 current_time=$(date +"%Y-%m-%d %H:%M:%S")
 

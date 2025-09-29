@@ -5,7 +5,6 @@
 #SBATCH --mem=1G
 #SBATCH --mincpus=1
 
-# Slusky Lab
 # Emily Proctor
 
 PAIR_FILEPATH=$1 # filename that contains all possible combinations of indexed sequence comparisons

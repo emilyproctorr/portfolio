@@ -1,5 +1,4 @@
 # Emily Proctor
-# Slusky Lab
 # Purpose
     # For each protein with AF output, grab the prediction with higheset pLDDT, copy over to separate folder, log to file, rename top prediction with protein id
 

@@ -8,7 +8,6 @@
 #SBATCH --array=1-18
 
 # Emily Proctor
-# Slusky Lab
 # $ sbatch --array=2-4,13,28-31 --export=ALL,INPUT_FILE=$HOME/epoch_60.fasta run_AF_batch.sh
 
 # clean up environment and load required modules
