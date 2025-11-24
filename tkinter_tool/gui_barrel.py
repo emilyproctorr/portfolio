@@ -9,9 +9,9 @@
     # Generates output file containing each protein id along with each user answer per protein
     # Generates index file so user is able to exit program and save position
 # Purpose
-    # View many proteins and determine if protein is a specific characteristic
-    # ex: I personally created and used this program to flip through many number of proteins and determine based off contact map and AlphaFold image, 
-        # if protein was predicted beta barrel or not
+    # View many proteins and determine if protein is a specific topology
+    # ex: I personally created and used this program to flip through many number of proteins and determine 
+        # based off contact map and AlphaFold image, if protein was predicted beta barrel or not.
 
 
 import tkinter as tk

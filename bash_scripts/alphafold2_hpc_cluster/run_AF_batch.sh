@@ -8,16 +8,19 @@
 #SBATCH --array=1-18
 
 # Emily Proctor
-# $ sbatch --array=2-4,13,28-31 --export=ALL,INPUT_FILE=$HOME/epoch_60.fasta run_AF_batch.sh
+# Script info
+    # This script runs AlphaFld2 on a single sequence from a fasta file. This script is submitted as a job array, 
+    # with each array index corresponding to a sequence in the fasta file.
 
 # clean up environment and load required modules
 module purge
 module load singularity alphafold
 
-# obtain basename
+# obtain file basename
 BASEFILE=$(basename $INPUT_FILE)
 BASENAME=$(basename -s .fasta $INPUT_FILE)
 
+# log variables
 echo "INPUT_FILE $INPUT_FILE"
 echo "SLURM_ARRAY_TASK_ID $SLURM_ARRAY_TASK_ID"
 echo "BASENAME $BASENAME"
@@ -26,6 +29,7 @@ echo "BASEFILE $BASEFILE"
 # select header and sequence and save to temporary file
 sed -n $((2*${SLURM_ARRAY_TASK_ID}-1)),+1p $INPUT_FILE > run_af_18_chlam_trit_hits_483training/fasta_files/${BASENAME}_${SLURM_ARRAY_TASK_ID}.fasta
 
+# run af2
 run --fasta_paths=run_af_18_chlam_trit_hits_483training/fasta_files/${BASENAME}_${SLURM_ARRAY_TASK_ID}.fasta \
     --output_dir=run_af_18_chlam_trit_hits_483training/outdir \
     --model_preset=monomer_ptm \
