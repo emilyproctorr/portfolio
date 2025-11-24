@@ -39,13 +39,13 @@ I developed a GUI using the Tkinter library to visualize a proteins contact map 
 
 Link: [Protein Contact Map Generation](bash_scripts/contact_map_generation)
 
-I present a workflow that automates the large-scale generation of RaptorX protein contact maps for protein sequences using Slurm job arrays. A controller script (`run_continuous.sh`) iteratively submits new job arrays with updated sequence IDs, to ensure maps are continuously being generated without overloading the cluster. Each array ID processes a single sequence by invoking a wrapper script (`run_job_batch.sh`), which executes the three required RaptorX steps (first_step.sh, second_step.sh, third_step.sh), which have to be run sequentially. Together, this provides an efficient workflow for generating contact maps for large numbers of sequences on an HPC cluster. 
+This includes a workflow that automates the large-scale generation of RaptorX protein contact maps using Slurm job arrays. A controller script (`run_continuous.sh`) iteratively submits new job arrays with updated sequence IDs to ensure maps are continuously being generated without overloading the cluster. Each array ID processes a single sequence by invoking a wrapper script (`run_job_batch.sh`), which executes three RaptorX steps (first_step.sh, second_step.sh, third_step.sh) that are run sequentially. Together, this provides an efficient workflow for generating contact maps for large numbers of sequences on an HPC cluster. 
 
 ### EMBOSS Stretcher Pairwise Sequence Similarity
 
 Link: [EMBOSS Stretcher](bash_scripts/emboss_stretcher)
 
-The EMBOSS Stretcher program is a tool used to compute the sequence similarity of two protein sequences using global alignment. I utilized this application to compute all-vs-all pairwise sequence similarity across large protein datasets. To improve efficiency, the full set of pairwise index combinations is divided into multiple pair files, which enables many comparisons to run in parallel on the HPC cluster. Each script processes a subset of sequence pairs, extracts the corresponding sequences from FASTA files, runs Stretcher, and parses the output to record the resulting similarity percentages.
+The EMBOSS Stretcher program is a tool used to compute the sequence similarity of two protein sequences using global alignment. I utilized this application to compute all-vs-all pairwise sequence similarity across large protein datasets. To improve efficiency, the full set of pairwise index combinations is divided into multiple pair files, which enables many comparisons to run in parallel on the HPC cluster. The script processes a subset of sequence pairs, extracts the corresponding sequences from FASTA files, runs Stretcher, and parses the output to record the resulting similarity percentages.
 
 ### AlphaFold2
 
